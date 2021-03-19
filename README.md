@@ -16,7 +16,7 @@ $ docker run -it --rm haproxy-config-test haproxy -c -f /usr/local/etc/haproxy/h
 Configuration file is valid
 ```
 
-Alternatively, if you've provided an invalid TLS cert/key bundle:
+Alternatively, if you've provided an invalid TLS cert/key bundle (e.g. certificates are out of order):
 
 ```
 $ docker run -it --rm haproxy-config-test haproxy -c -f /usr/local/etc/haproxy/haproxy.cfg
