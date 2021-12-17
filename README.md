@@ -5,7 +5,7 @@
 ## How to Use
 
 1. Clone the repository.
-1. Create your concatenated TLS cert chain + key (e.g `cat ssl.crt ssl.key > ssl.crt+key`) and ensure the output file (`ssl.crt+key`) is in the local directory.
+1. Create your concatenated TLS cert chain + key (e.g `cat ssl.crt > ssl.crt+key; echo >> ssl.crt+key; cat ssl.key >> ssl.crt+key`) and ensure the output file (`ssl.crt+key`) is in the local directory.
 1. Build the image (e.g. `docker build -t haproxy-config-test .`).
 1. Run the container to test your config (e.g. `docker run -it --rm haproxy-config-test haproxy -c -f /usr/local/etc/haproxy/haproxy.cfg`)
 
